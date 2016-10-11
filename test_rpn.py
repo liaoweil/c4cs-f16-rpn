@@ -17,4 +17,4 @@ class TestBasics(unittest.TestCase):
 		self.assertEqual(2, result)
 	def test_badstring(self):
 		with self.assertRaises(TypeError):
-		rpn.calculate("1 2 3 +")
+			rpn.calculate("1 2 3 +")
