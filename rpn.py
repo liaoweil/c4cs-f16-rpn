@@ -2,6 +2,9 @@
 
 import operator
 
+import sys
+from termcolor import colored, cprint
+
 operators = {
 	'+': operator.add,
 	'-': operator.sub,
@@ -30,8 +33,11 @@ def calculate(myarg):
 
 def main():
 	while True:
-		result = calculate(input("rpn calc> "))
+		result = calculate(raw_input("rpn calc> "))
 		print("Result: ", result)
+		if result < 0:
+			cprint("\nLOOKOUT ITS NEGATIVE!", 'red', attrs=['bold']) 
+
 
 if __name__ == '__main__':
 	main()
