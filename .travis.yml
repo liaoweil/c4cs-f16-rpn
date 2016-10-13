@@ -2,7 +2,9 @@ language: python
 python:
   - "3.5"
 #command to install dependencies
-
+  - pip install coveralls
 #command to run tests
 script: 
-  - python test_rpn.py
+  - coverage run test_rpn.py
+after_success:
+  - coveralls
